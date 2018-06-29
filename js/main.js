@@ -21,10 +21,11 @@ console.log(topSpeed() * 2);
 function addTen(numberOne) {
     return numberOne + 10;
 }
+
 // invoking addTen, with a value for the numberOne argument
 console.log(addTen(100));
 
-// fucntion that does something immediately
+// function that does something immediately
 function updateHeading(randomString){
     document.getElementById('head').innerText = randomString;
 }
@@ -110,9 +111,48 @@ if (cartoons[1] === 'garfield') {
     // you will end up here
 }
 
-console.log(cartoons.indexOf('popeye') === 2) {
+/*console.log(cartoons.indexOf('popeye') === 2) {
 
 if (cartoons.indexOf('popeye') === 2) {
 
     // you will end up here
+}*/
+
+var beers = ['Laguntas', 'miller', 'coors', 'bud', 'drink'];
+var beersHTML = '';
+// for loop. initialization, test, loop
+for (var i = 0; i < beers.length; i++) {
+    console.log(beers[i]);
+    beersHTML = beersHTML + '<li>' + beers[i] + '</li>';
+    // each item 
 }
+document.getElementById('js-beers').innerHTML = beersHTML;
+
+// while loop
+var x = 6;
+while(x < 10) {
+    console.log(x);
+    x++;
+}
+
+var heatwave = ['It', 'is', 'way', 'too', 'hot', 'outside'];
+for (h = 0; h < heatwave.length; h++) {
+    console.log(heatwave[h]);
+}
+
+var heading = document.getElementById('title');
+console.log(heading.innerText);
+var name = 'Steve';
+heading.innerText = 'Welcome ' + name;
+
+var secondHeader = document.getElementsByClassName('heading')[1];
+secondHeader.innerText = ('I selected YOU and updated your text');
+
+var carCode = document.getElementsByClassName('carmodel')[0];
+carCode.innerText = 'BMW ' + carCode.innerText;
+
+/*var firstPara = document.querySelector('.js-copy');
+firstPara.innerHTML = '<span style="color: red;">I replaced you</span>'
+//returns all p.js-copy's as an array
+var allPara = document.querySelectorAll('js-copy');
+allPara[1].innerText = 'Second para, I replaced you too';*/
